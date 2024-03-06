@@ -1,0 +1,504 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1d2634;
+  color: #9e9ea4;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.icon {
+  vertical-align: middle;
+  color: #fbfbff;
+  line-height: 1px;
+  font-size: 20px;
+}
+.icon_heaACder {
+  vertical-align: middle;
+  line-height: 1px;
+  font-size: 26px;
+}
+.icon, .icon_header {
+  margin-right: 5px;
+}
+
+.close_icon {
+  color: #d0dae9;
+  margin-left: 30px;
+  margin-top: 13px;
+  cursor: pointer;
+}
+
+.dropdown-content{
+  background-color : #01688d;
+  border-radius: 4px;
+  box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02);
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+a.dropdown-item{
+  color: #e2e2eb;
+  padding-right: 3rem;
+  text-align: inherit;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.card {
+  /* Add your existing styling for cards here */
+
+  cursor: pointer;
+  transition: transform 225ms ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card.clicked {
+  transform: scale(0.9);
+  opacity: 0.7;
+}
+
+.pagination-previous{
+  background-color: #46464b;
+  color: #000000;
+  text-decoration: none;
+}
+
+
+.pagination-next{
+  background-color: #46464b;
+  color: #fbfbff;
+  text-decoration: none;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 160px 1fr 1fr 1fr;
+  grid-template-rows: 3fr;
+  grid-template-areas:
+    'sidebar header header header'
+    'sidebar main main main';
+}
+
+/* Header  */
+.header {
+  grid-area: header;
+  height: 60px;
+  display: flex;
+  background-color: #007BA7;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px 0 30px;
+  box-shadow: 0 6px 7px -3px rgba(0, 0, 0, 0.35);
+}
+
+.menu-icon {
+  display: grid;
+}
+
+.header-left{
+  margin-left: -15%;
+}
+/* End Header  */
+
+/* Sidebar  */
+#sidebar {
+  grid-area: sidebar;
+  height: 106vh;
+  background-color: #015370;
+  overflow-y: auto;
+  transition: all 0.5s, margin-left 0.5s; /* contoh jika hanya ingin mentransisikan margin-left */
+  -webkit-transition: all 0.5s, margin-left 0.5s;
+}
+
+img, svg {
+  vertical-align: middle;
+  margin-right: 5%;
+}
+
+a:hover {
+color: #46464b;
+}
+
+.sidebar-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #e2e2eb;
+  padding: 15px 30px 0px 30px;
+  margin-bottom: 30px;
+
+}
+
+
+.sidebar-title > span {
+  display: none;
+  margin-bottom: -20px;
+}
+
+.sidebar-brand {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 700;
+
+}
+
+/* YourCSSFile.css */
+.card:hover {
+color: #d0dae9;
+}
+
+
+.card h5 {
+opacity: 0; /* Sembunyikan teks secara default */
+color: #e2e2eb;
+transition: opacity 0.3s ease-in-out; /* Efek transisi untuk perubahan opacity */
+}
+
+.card:hover h5 {
+opacity: 1; /* Tampilkan teks saat kursor di atas card */
+}
+
+
+
+.header-brand {
+  top: 15px;
+  color: #e2e2eb;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.header-brand:hover{
+  color: #9e9ea4;
+  transition: 130ms;
+}
+
+
+.sidebar-list {
+  padding: 0;
+  list-style-type: none;
+  transition: 150ms;
+}
+
+
+
+.sidebar-list-item {
+  padding: 20px 20px 20px 20px;
+  font-size: 18px;
+  transition: 300ms;
+}
+
+.sidebar-list-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: 300ms;
+}
+
+
+
+.sidebar-list-item > a {
+  text-decoration: none;
+  color: #e2e2eb;
+}
+
+.sidebar-list-item:hover > a {
+  text-decoration: none;
+  color: #99999c;
+}
+
+.sidebar-responsive {
+  display: inline !important;
+  position: absolute;
+  left: -100vh;
+  transition: 840ms;
+  /*
+    we want the z-index of the sidebar higher so that
+    the charts are not showing over the sidebar 
+    on small screens
+  */
+  z-index: 12 !important;
+}
+
+.sidebar-responsive.active{
+  left: 0vh;
+  transition: 420ms;
+}
+
+/* End Sidebar  */
+
+
+/* Main  */  
+.main-container {
+  grid-area: main;
+  overflow-y: auto;
+  height: 100%;
+  padding: 20px 20px;
+  background-color: #2B4F60;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+
+
+.main-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  margin: 15px 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 8px 15px;
+  text-decoration: none;
+  color: #eeeef8;
+  border-radius: 5px;
+}
+
+.card:first-child {
+  background-color: #2962ff;
+}
+
+.card:nth-child(2) {
+  background-color: #ff6d00;
+}
+
+.card:nth-child(3) {
+  background-color: #2e7d32;
+}
+
+.card:nth-child(4) {
+  background-color: #550874;
+}
+
+.card:nth-child(5) {
+  background-color: #9C0F48;
+}
+
+.card:nth-child(6) {
+  background-color: #2B4F60;
+}
+
+.card:nth-child(7) {
+  background-color: #e7b025;
+}
+
+.card:nth-child(8) {
+  background-color: #0B60B0;
+}
+
+
+.card-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-inner > .card_icon {
+  font-size: 25px;
+}
+
+.charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 60px;
+  height: 300px;
+}
+
+/* End Main  */
+
+@media screen and (max-width: 1920px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 12fr;
+    grid-template-areas:
+      'header'
+      'main';
+      height: 100vh;
+    -webkit-transition: margin-left 0.8s ease-out;
+    }
+  
+
+
+    .grid-container.sidebar-responsive {
+      margin-left: 0; /* Set ke 0 agar kontennya memenuhi layar saat sidebar ditutup */
+    }
+  #sidebar {
+    display: none;
+    height:107.5vh;
+  }
+
+  .sidebar-responsive {
+    display: inline !important;
+    position: absolute;
+    left: -106vh;
+    transition: 840ms;
+    /*
+      we want the z-index of the sidebar higher so that
+      the charts are not showing over the sidebar 
+      on small screens
+    */
+    z-index: 12 !important;
+  }
+  
+  .sidebar-responsive.active{
+    left: 0vh;
+    transition: 420ms;
+  }
+
+  .menu-icon {
+    display: inline;
+  }
+
+  .sidebar-title > span {
+    display: inline;
+  }
+
+  .header-left{
+    margin-left: -15%;
+  }
+
+  .main-container {
+    grid-area: main;
+    overflow-y: auto;
+    height: 100%;
+    padding: 20px 20px;
+    background-color: #1d2634;
+    color: rgba(255, 255, 255, 0.95);
+  }
+  .hero.is-fullheight {
+    height: 200vh;
+    width: 100%;
+    }
+}
+
+/* Medium <= 992px */
+  
+@media screen and (max-width: 992px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 12fr;
+    grid-template-areas:
+      'header'
+      'main';
+    height: 100%;
+    transition: margin-left 0.8s ease-out; /* Sesuaikan durasi dan fungsi timing di sini */
+    -webkit-transition: margin-left 0.8s ease-out;
+    }
+  
+    .grid-container.sidebar-responsive {
+      margin-left: 0; /* Set ke 0 agar kontennya memenuhi layar saat sidebar ditutup */
+    }
+
+  #sidebar {
+    display: none;
+    height: 130.5%;
+  }
+
+  .sidebar-responsive {
+    display: inline !important;
+    position: absolute;
+    left: -106vh;
+    transition: 840ms;
+    /*
+      we want the z-index of the sidebar higher so that
+      the charts are not showing over the sidebar 
+      on small screens
+    */
+    z-index: 12 !important;
+  }
+  
+  .sidebar-responsive.active{
+    left: 0vh;
+    transition: 420ms;
+  }
+
+  .menu-icon {
+    display: inline;
+  }
+
+  .sidebar-title > span {
+    display: inline;
+  }
+
+  .header-left{
+    margin-left: -15%;
+  }
+
+  .main-container {
+    grid-area: main;
+    overflow-y: auto;
+    height: 100%;
+    padding: 20px 20px;
+    background-color: #1d2634;
+    color: rgba(255, 255, 255, 0.95);
+  }
+}
+
+
+
+/* Small <= 768px */
+  
+@media screen and (max-width: 768px) {
+  .grid-container{
+    height:190vh;
+  }
+
+  .main-cards {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 0;
+  }
+
+  .charts {
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+  }
+}
+
+/* Extra Small <= 576px */
+
+@media screen and (max-width: 576px) {
+  .header-left{
+    margin-left: -1%;
+  }
+  
+.grid-container{
+  height: 100%;
+}
+    .sidebar-responsive {
+    display: inline !important;
+    position: absolute;
+    left: -100vh;
+    transition: 840ms;
+    /*
+      we want the z-index of the sidebar higher so that
+      the charts are not showing over the sidebar 
+      on small screens
+    */
+    z-index: 12 !important;
+  }
+  
+  .sidebar-responsive.active{
+    left: 0vh;
+    transition: 420ms;
+  }
+
+  #sidebar {
+    display: none;
+    height: 200%;
+  }
+
+}
+
+@media screen and (max-width: 576px) {
+.grid-container{
+  height: 100%;
+}
+
+}

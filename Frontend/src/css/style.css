@@ -1,0 +1,145 @@
+body,.d-flex, .header, .box, .column p {
+    font-family: 'poppins', sans-serif;
+  }
+.menu{
+  padding: 20px;
+}
+.tambah{
+  background-color: #007BA7;
+} 
+
+  .info,.navbar{
+    background-color: #007BA7;
+  }
+  
+  /* Pengaturan font-weight yang berbeda */
+  .d-flex, .box, .column p {
+    font-weight: 600;
+  }
+  
+  .header {
+    font-weight: 700; /* Meningkatkan font-weight untuk .header */
+  }
+  
+  .column p {
+    font-size:medium;
+    margin-bottom: 25px;
+  }
+  
+  .col-md-4 {
+    margin-bottom: 10px;
+  }
+  
+  .larger-box{
+    width: 80%;
+    height: 80%;
+  }
+  
+  .colored-img {
+    filter: invert(1) hue-rotate(180deg);
+  }
+  .image {
+    width: 100px; /* Ubah ukuran sesuai kebutuhan */
+    height: 100px; /* Ubah ukuran sesuai kebutuhan */
+  }
+  .gradient-custom {
+    /* fallback for old browsers */
+    /* background: #6a11cb; */
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to bottom, rgb(119, 211, 253), rgba(37, 117, 252, 1))
+    }
+  
+    name{
+      color: blue;
+      text-transform: capitalize;
+    }
+  
+    /* Tambahkan gaya ini ke file CSS Anda atau tambahkan langsung ke dalam tag style di HTML */
+  
+  /* Tambahkan gaya ini ke file CSS Anda atau tambahkan langsung ke dalam tag style di HTML */
+  /* Tambahkan gaya ini ke file CSS Anda atau tambahkan langsung ke dalam tag style di HTML */
+  .larger-box {
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .larger-box p {
+    margin-top: 0; /* Mengatur margin-top pada teks tanpa efek hover */
+  }
+  
+  .larger-box:hover {
+    transform: scale(1.1) translateY(10px); /* Atur translasi ke bawah sejauh 10px saat dihover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Gaya tambahan untuk memberikan efek hover pada teks */
+  
+  /* Tambahkan ini ke dalam file style.css */
+  .text-link, .navbar-item, .navbar-link, .navbar-end{
+    color: rgb(255, 255, 255);
+    text-decoration: none; /* Menonaktifkan garis bawah pada tautan */
+  }
+  
+  /* Jika ingin menonaktifkan efek garis bawah hanya saat hover, tambahkan aturan ini: */
+  .text-link:hover {
+    text-decoration: none;
+  }
+
+  .card{
+    height: 80%;
+    max-width: 60%;
+  }
+  .dx{
+    margin-top: 50px;
+  }
+
+.table-dark{
+  color: aliceblue;
+}
+
+.sb{
+  display: flex;
+  height: 100%;
+}
+
+
+@media screen and (max-width: 979px) {
+  .navbar-menu {
+    display: none;
+  }
+
+  .navbar-burger {
+    display: block;
+  }
+  .sb{
+    display: none;
+  }
+
+  .navbar-menu.is-active {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff; /* Ganti warna latar belakang sesuai kebutuhan */
+    position: absolute;
+    top: 56px; /* Sesuaikan sesuai kebutuhan */
+    right: 0;
+    left: 0;
+    padding: 10px;
+    z-index: 1;
+  }
+}
+
+@media screen and (max-width: 979px) {
+  .field {
+    margin-bottom: 1rem;
+  }
+
+  .has-addons .control {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
